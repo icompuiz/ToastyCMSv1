@@ -1,0 +1,44 @@
+/* line 2, ../sass/simpleSlider.sass */
+.simpleSlide-slide div {
+  position: relative;
+}
+
+/* line 8, ../sass/simpleSlider.sass */
+.slideshow {
+  border: 3px solid #eeeeee;
+  position: relative;
+  overflow: hidden;
+  width: 800px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+/* line 15, ../sass/simpleSlider.sass */
+.simpleSlideStatus-tray {
+  margin: 0 auto;
+  margin-top: 10px;
+  border: 2px solid #eeeeee;
+}
+
+/* line 20, ../sass/simpleSlider.sass */
+.left-button {
+  background-image: url("../../img/left-arrow.png");
+}
+
+/* line 24, ../sass/simpleSlider.sass */
+.right-button {
+  background-image: url("../../img/right-arrow.png");
+  right: 0px;
+}
+
+/* line 29, ../sass/simpleSlider.sass */
+.left-button, .right-button {
+  cursor: pointer;
+  height: 72px;
+  position: absolute;
+  width: 50px;
+  display: none;
+  z-index: 9999;
+  top: 50%;
+  margin-top: -36px;
+}

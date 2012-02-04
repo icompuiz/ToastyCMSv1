@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+	<name>default</name>
+	<fields>
+		<meeting_time type="time"/>
+		<bio type="text"/>
+	</fields>
+</layout>

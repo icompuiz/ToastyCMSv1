@@ -1,0 +1,153 @@
+/* line 1, ../sass/feeds.sass */
+.feeds {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 0;
+}
+
+/* line 7, ../sass/feeds.sass */
+.feed_nav {
+  text-align: center;
+  position: relative;
+  z-index: 99;
+  display: none;
+}
+/* line 12, ../sass/feeds.sass */
+.feed_nav div {
+  width: 20px;
+  height: 22px;
+  overflow: hidden;
+  border: 1px solid #eeeeee;
+}
+/* line 17, ../sass/feeds.sass */
+.feed_nav div img {
+  position: relative;
+}
+/* line 20, ../sass/feeds.sass */
+.feed_nav div:hover img {
+  top: -22px;
+}
+
+/* line 22, ../sass/feeds.sass */
+.next {
+  float: left;
+}
+
+/* line 25, ../sass/feeds.sass */
+.prev {
+  float: left;
+}
+/* line 27, ../sass/feeds.sass */
+.prev img {
+  left: -20px;
+}
+
+/* line 30, ../sass/feeds.sass */
+.feed {
+  width: 399px;
+  max-height: 384px;
+  margin-bottom: 20px;
+  float: left;
+  border-left: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+}
+/* line 39, ../sass/feeds.sass */
+.feed a {
+  border: none;
+  color: inherit;
+}
+/* line 42, ../sass/feeds.sass */
+.feed a:hover {
+  border: none;
+  color: inherit;
+}
+/* line 45, ../sass/feeds.sass */
+.feed:first-child {
+  border-left: none;
+}
+/* line 48, ../sass/feeds.sass */
+.feed:nth-child(3n) {
+  border-left: none;
+}
+
+/* line 51, ../sass/feeds.sass */
+.elements {
+  padding: 5px;
+  top: 0px;
+}
+
+/* line 54, ../sass/feeds.sass */
+.feed-title {
+  border-bottom: 1px solid #e2e2e2;
+  text-align: center;
+}
+/* line 55, ../sass/feeds.sass */
+.feed-title a {
+  border: none;
+  color: inherit;
+}
+/* line 58, ../sass/feeds.sass */
+.feed-title a:hover {
+  border: none;
+  color: inherit;
+}
+
+/* line 65, ../sass/feeds.sass */
+.feed-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 69, ../sass/feeds.sass */
+.feed-list li {
+  padding: 0;
+}
+
+/* line 71, ../sass/feeds.sass */
+.feed-element {
+  margin-bottom: 6px;
+}
+
+/* line 74, ../sass/feeds.sass */
+.feed-element-info {
+  height: 90px;
+  padding: 8px;
+}
+
+/* line 78, ../sass/feeds.sass */
+.feed-element-icon {
+  padding-top: 8px;
+  float: left;
+  overflow: hidden;
+  width: 60px;
+  height: 80px;
+}
+/* line 84, ../sass/feeds.sass */
+.feed-element-icon img {
+  min-width: 100%;
+  height: 100%;
+}
+/* line 87, ../sass/feeds.sass */
+.feed-element-icon a {
+  width: 100%;
+  height: 100;
+}
+
+/* line 90, ../sass/feeds.sass */
+.feed-element-text {
+  float: left;
+  margin-left: 5px;
+}
+
+/* line 93, ../sass/feeds.sass */
+.feed-element-title {
+  font-size: 1.1em;
+  font-weight: bolder;
+}
+
+/* line 98, ../sass/feeds.sass */
+.feed-element-text {
+  width: 76%;
+  font-size: 0.8em;
+}

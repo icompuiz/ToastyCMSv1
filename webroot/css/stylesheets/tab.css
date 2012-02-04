@@ -1,0 +1,62 @@
+/* line 1, ../sass/tab.sass */
+.mainTabContent {
+  clear: both;
+  border: 1px solid #bbbbbb;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 7, ../sass/tab.sass */
+.tabs {
+  list-style: none;
+  text-align: center;
+  font-size: 1.5em;
+}
+/* line 10, ../sass/tab.sass */
+.tabs li {
+  position: relative;
+  float: left;
+  width: 150px;
+  height: 30px;
+  border: 1px solid #bbbbbb;
+  margin-left: 5px;
+  top: 1px;
+  background: #eeeeee;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  background: #eeeeee;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeeeee), to(#bbbbbb));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #bbbbbb);
+  background-image: -moz-linear-gradient(top, #eeeeee, #bbbbbb);
+}
+/* line 27, ../sass/tab.sass */
+.tabs li.active {
+  background: white;
+  border-bottom: 1px solid white;
+}
+/* line 33, ../sass/tab.sass */
+.tabs a {
+  text-decoration: none;
+}
+/* line 35, ../sass/tab.sass */
+.tabs a:hover {
+  color: inherit;
+}
+
+/* line 38, ../sass/tab.sass */
+.tabContent {
+  width: 600px;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+/* line 42, ../sass/tab.sass */
+.tabContent input {
+  float: right;
+}
+/* line 45, ../sass/tab.sass */
+.tabContent label {
+  clear: both;
+  font-size: 2em;
+}

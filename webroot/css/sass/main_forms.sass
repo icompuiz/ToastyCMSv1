@@ -1,0 +1,126 @@
+/**
+	Forms **/
+	
+form
+	clear: both
+	margin-right: 20px
+	padding: 0
+	width: 95%
+	div
+		clear: both
+		vertical-align: text-top
+		.submit
+			border: 0
+			clear: bother
+			margin-top: 10px
+	.input, .tabarea, .multifilearea
+		clear: both
+		margin-bottom: 1em
+		vertical-align: text-top
+		color: #444
+	.required
+		font-weight: bold
+		label
+			&:after
+				color: #e32
+				content: '*'
+				display: inline
+	.submit
+		input[type=submit]
+			background: #62af56
+			background-image: -webkit-gradient(linear, left top, left bottom, from(#76BF6B), to(#3B8230))
+			background-image: -webkit-linear-gradient(top, #76BF6B, #3B8230)
+			background-image: -moz-linear-gradient(top, #76BF6B, #3B8230)
+			border-color: #2d6324
+			color: #fff
+			text-shadow: rgba(0,0,0,0.5) 0px -1px 0px
+			padding: 8px 10px
+			&:hover
+				background: #5BA150
+	.error
+		background: #FFDACC
+		-moz-border-radius: 4px
+		-webkit-border-radius: 4px
+		border-radius: 4px
+		font-weight: normal
+	.error-message	
+		-moz-border-radius: none
+		-webkit-border-radius: none
+		border-radius: none
+		border: none
+		margin: 0
+		padding:
+			left: 4px
+			right: 0
+	.error, .error-message
+		color: #9E2424
+		-webkit-box-shadow: none
+		-moz-box-shadow: none
+		-ms-box-shadow: none
+		-o-box-shadow: none
+		box-shadow: none
+		text-shadow: none
+
+		
+fieldset
+	border: none
+	margin-bottom: 1em
+	padding: 16px 10px
+	legend
+		color: #e32
+		font:
+			size: 160%
+			weight: bold
+	fieldset
+		margin-top: 0
+		padding: 10px 0 0
+		legend
+			font:
+				size: 120%
+				weight: normal
+		div
+			clear: left
+			margin: 0 20px
+label
+	display: block
+	font-size: 110%
+	margin-bottom: 3px
+	
+input, textarea
+	clear: both
+	font-size: 140%
+	font-family: "frutiger linotype", "lucida grande", "verdana", sans-serif
+	padding: 1%
+	width: 98%
+select
+	clear: both
+	font-size: 120%
+	vertical-align: text-bottom
+select[multiple=multiple]
+	width: 100%
+option
+	font-size: 120%
+	padding: 0 3px
+input[type=checkbox]
+	clear: left
+	float: left
+	margin: 0px 6px 7px 2px
+	width: auto
+div.checkbox
+	label
+		display: inline
+input[type=radio]
+	float: left
+	width: auto
+	margin: 6px 0
+	padding: 0
+	line-height: 26px
+	
+.radio
+	label
+		margin: 0 0 6px 20px
+		line-height: 26px
+input[type=submit]
+	display: inline
+	font-size: 110%
+	width: auto

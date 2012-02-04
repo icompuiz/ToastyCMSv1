@@ -1,0 +1,46 @@
+/* line 14, ../sass/facebook_gallery.sass */
+#facebook_gallery {
+  width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 19, ../sass/facebook_gallery.sass */
+.facebook_li {
+  float: left;
+  margin: 5px;
+}
+/* line 22, ../sass/facebook_gallery.sass */
+.facebook_li:first-child {
+  margin-left: 0;
+}
+/* line 25, ../sass/facebook_gallery.sass */
+.facebook_li:last-child {
+  margin-right: 0;
+}
+
+/* line 29, ../sass/facebook_gallery.sass */
+.facebook_icon {
+  border: 2px solid #e2e2e2;
+  text-align: center;
+  padding: 5px;
+}
+/* line 33, ../sass/facebook_gallery.sass */
+.facebook_icon .img_wrap {
+  height: 140px;
+  width: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+/* line 38, ../sass/facebook_gallery.sass */
+.facebook_icon .img_wrap img {
+  width: 100%;
+  min-height: 140px;
+}
+
+/* line 42, ../sass/facebook_gallery.sass */
+.album_title {
+  width: 200px;
+  margin: 0 auto;
+  white-space: wrap;
+}

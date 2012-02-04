@@ -1,0 +1,67 @@
+$cake_blue: #003d4c
+$cake_blue_level1: #004759
+$cake_blue_level0: #007B98
+
+$blue: #003642
+$red: #e32
+$green: #119f57
+$yellow: #ffa201
+$blueBorder: #e2e2e2
+$redBorder: #edaca6
+$lightblue: #698696
+$plain: #fff
+
+#calendar
+	width: 940px
+	margin: 0 auto
+	
+	
+.day_li, .weekday_li
+	width: 132px
+	height: 110px
+	float: left
+	margin: 
+		right: 2px
+		bottom: 6px
+	&:last-child
+		margin: 
+			right: 0
+		
+.weekday_li
+	height: 20px
+
+
+.weekday, .calendar_day
+	padding: 1px
+	border: 1px solid #eee
+	height: 100%
+.calendar_day
+	&:hover
+		background: #eee
+
+.day_num
+	text-align: right
+	
+.calendar_day.event
+	font:
+		size: .7em
+.calendar_day.blank
+	border: none
+	&:hover
+		background: #fff
+#calendar_controls
+	width: 100%
+	#previous_month, #next_month
+		width: 10%
+	#current_month
+		width: 80%
+#calendar_headers, #calendar_controls
+	text-align: center
+
+.calendar_control
+	float: left
+	font:
+		size: 2em
+		
+.today
+	border: 1px solid $blue * 3

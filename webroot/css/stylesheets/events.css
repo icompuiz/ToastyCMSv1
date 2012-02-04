@@ -1,0 +1,106 @@
+/* line 4, ../sass/events.sass */
+.event_post {
+  border: 3px solid #eeeeee;
+  padding: 20px;
+  margin-top: 20px;
+}
+/* line 10, ../sass/events.sass */
+.event_post .event_image {
+  width: 30%;
+  float: left;
+}
+/* line 14, ../sass/events.sass */
+.event_post .event_desc {
+  border-top: 1px solid #edaca6;
+  margin-top: 20px;
+  padding: 10px;
+}
+/* line 21, ../sass/events.sass */
+.event_post .event_info {
+  width: 60%;
+  margin-left: 40px;
+  float: left;
+}
+
+/* line 27, ../sass/events.sass */
+.event_image img {
+  width: 100%;
+}
+
+/* line 30, ../sass/events.sass */
+.event_title {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+/* line 35, ../sass/events.sass */
+.event_title a {
+  border: none;
+  color: inherit;
+}
+/* line 38, ../sass/events.sass */
+.event_title a:hover {
+  border: none;
+}
+
+/* line 40, ../sass/events.sass */
+.event_left, .event_right {
+  float: left;
+}
+
+/* line 44, ../sass/events.sass */
+.event_field {
+  border-bottom: 1px solid #eeeeee;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+/* line 51, ../sass/events.sass */
+.event_header {
+  float: left;
+  width: 20%;
+  color: #edaca6;
+  font-weight: bold;
+}
+
+/* line 57, ../sass/events.sass */
+.event_detail {
+  float: left;
+  width: 70%;
+}
+
+/* line 62, ../sass/events.sass */
+.event_description .event_detail {
+  width: 100%;
+  text-align: left;
+}
+
+/* line 67, ../sass/events.sass */
+.event_view .event_left {
+  width: 30%;
+}
+/* line 69, ../sass/events.sass */
+.event_view .event_right {
+  width: 62%;
+}
+/* line 71, ../sass/events.sass */
+.event_view .event_image {
+  padding: 5px;
+  width: 95%;
+  border: 3px solid #eeeeee;
+}
+/* line 76, ../sass/events.sass */
+.event_view .event_info {
+  margin-left: 5px;
+  border: 3px solid #eeeeee;
+  padding: 20px;
+}
+/* line 83, ../sass/events.sass */
+.event_view .event_banner {
+  margin: 0 auto;
+  margin-top: 20px;
+}
+/* line 86, ../sass/events.sass */
+.event_view .event_banner img {
+  width: 100%;
+}

@@ -1,0 +1,49 @@
+/* line 1, ../sass/multifile.sass */
+.multifilearea {
+  margin-top: 10px;
+}
+
+/* line 4, ../sass/multifile.sass */
+.MultiFile {
+  width: 500px;
+  overflow: hidden;
+  border: 1px solid #bbbbbb;
+}
+
+/* line 9, ../sass/multifile.sass */
+.multiFileAddList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+/* line 14, ../sass/multifile.sass */
+.multiFileAddList li {
+  padding: 5px;
+  height: 30px;
+  clear: both;
+  font-size: 1.2em;
+}
+/* line 19, ../sass/multifile.sass */
+.multiFileAddList li:nth-child(1) {
+  border-top: 1px solid #bbbbbb;
+}
+/* line 21, ../sass/multifile.sass */
+.multiFileAddList li:nth-child(2n) {
+  background: #eeeeee;
+  border-top: 1px solid #bbbbbb;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+/* line 27, ../sass/multifile.sass */
+.delete_button {
+  margin-left: 20px;
+  border: none;
+  width: 30px;
+  height: 30px;
+  float: right;
+  background: url("../../img/delete.png") no-repeat;
+}
+/* line 34, ../sass/multifile.sass */
+.delete_button:hover {
+  background: url("../../img/delete_active.png") no-repeat;
+}

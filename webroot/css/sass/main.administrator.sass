@@ -1,0 +1,794 @@
+$cake_blue: #003d4c
+$cake_blue_level1: #004759
+$cake_blue_level0: #007B98
+* 
+	margin: 0
+	padding: 0
+
+body
+	background: $cake_blue
+	color: #fff
+	font:
+		family: 'lucida grande',verdana,helvetica,arial,sans-serif
+		size: 90%
+		margin: 0
+a 
+	color: $cake_blue
+	&:hover
+		color: #367889
+		text-decoration: none
+	img
+		border: none
+h1, h2, h3, h4
+	font-weight: normal
+	margin-bottom: 0.5em
+	
+h1
+	background: #fff
+	color: $cake_blue
+	font-size: 100%
+h2	
+	background: #fff
+	color: #e32
+	font:
+		family: 'Gill Sans','lucida grande', helvetica, arial, sans-serif
+		size: 190%
+h3
+	color: #2c6877
+	font:
+		family: 'Gill Sans','lucida grande', helvetica, arial, sans-serif
+		size: 165%
+h4
+	color: #993
+	font-weight: normal
+ul, li
+	margin: 0 12px
+p 
+	maring: 0 0 1em 0
+
+/**
+	Layout **/
+	
+#container
+	text-align: left
+	width: 1000px
+	margin: 0 auto
+	
+#header
+	padding: 10px 20px
+	h1
+		line-height: 20px
+		background: $cake_blue
+		
+		a
+			color: #fff
+			background: $cake_blue
+			font-weight: normal 
+			text-decoration: none
+			&:hover
+				color: #fff
+				background: $cake_blue
+				text-decoration: underline
+#content
+	border: 3px solid #bbb
+	background: #fff
+	clear: both
+	color: #333
+	padding: 10px 20px 40px 20px
+	overflow: auto
+	
+#footer
+	clear: both
+	padding: 6px 10px
+	text-align: right
+	
+/**
+	Containers **/
+	
+	div.form, div.index, div.view
+		float: right
+		width: 76%
+		border-left: 1px solid #666
+		padding: 10px 2%
+	
+div.actions
+	float: left
+	width: 16%
+	
+	h3
+		padding-top: 0
+		color: #777
+		
+/**
+	Tables **/
+
+table 
+	border-right: 0
+	clear: both
+	color: #333
+	margin-bottom: 10px
+	width: 100%
+	
+	tr
+		td 
+			padding: 6px
+			text-align: left
+			vertical-align: top
+			border-bottom: 1px solid #ddd
+		&:nth-child(even)
+			background: #f9f9f9
+	td.actions
+		a
+			margin: 0px 6px
+			padding: 2px 5px
+	
+th
+	border: 0
+		bottom: 2px solid #555
+	text-align: left
+	padding: 4px
+	a
+		display: block
+		padding: 2px 4px
+		text-decoration: none
+		.asc
+			&:after
+				content: ' ?'
+		.desc
+			&:after
+				content: ' ?'
+		
+td.actions
+	textd-align: center
+	whitespace: nowrap
+	
+.cake-sql-log
+	background: #fff
+	td
+		padding: 4px 8px
+		text-align: left
+		font-family: Monaco, Consolas, "Courier New", monospaced
+		
+	caption
+		color: #fff
+		
+/**
+	Paging **/
+	
+.paging
+	background: #fff
+	color: #ccc
+	margin-top: 1em
+	clear: both
+	
+	.current, .disabled, a
+		text-decoration: none
+		padding 5px 8px
+		display: inline-block
+	.prev
+		border-left: 1px solid #ccc
+		-moz-border-radius: 4px 0 0 4px
+		-webkit-border-radius: 4px 0 0 4px
+		border-radius: 4px 0 0 4px
+	.next
+		-moz-border-radius: 0 4px 4px 0
+		-webkit-border-radius: 0 4px 4px 0
+		border-radius: 0 4px 4px 0
+	.disabled
+		color: #ddd
+		&:hover
+			background: transparent
+	.current
+		background: #efefef
+		color: #c73e14
+			
+.paging > span
+	display: inline-block
+	border: 1px solid #ccc
+		left: 0
+	&:hover
+		background: #efefef
+		
+/**
+	Scaffold View **/
+	
+dl 
+	dd:nth-child(4n+2), dt:nth-child(4n+1)
+		background: #f4f4f4
+dt
+	font-weight: bold
+	padding-left: 4px
+	vertical-align: top
+	width: 10em
+dd
+	margin:
+		left: 10em
+		top: -2em
+	vertical-align: top
+	
+/**
+	Forms **/
+	
+form
+	clear: both
+	margin-right: 20px
+	padding: 0
+	width: 95%
+	div
+		clear: both
+		vertical-align: text-top
+		.submit
+			border: 0
+			clear: bother
+			margin-top: 10px
+	.input, .tabarea, .multifilearea
+		clear: both
+		margin-bottom: 1em
+		vertical-align: text-top
+		color: #444
+	.required
+		font-weight: bold
+		label
+			&:after
+				color: #e32
+				content: '*'
+				display: inline
+	.submit
+		input[type=submit]
+			background: #62af56
+			background-image: -webkit-gradient(linear, left top, left bottom, from(#76BF6B), to(#3B8230))
+			background-image: -webkit-linear-gradient(top, #76BF6B, #3B8230)
+			background-image: -moz-linear-gradient(top, #76BF6B, #3B8230)
+			border-color: #2d6324
+			color: #fff
+			text-shadow: rgba(0,0,0,0.5) 0px -1px 0px
+			padding: 8px 10px
+			&:hover
+				background: #5BA150
+	.error
+		background: #FFDACC
+		-moz-border-radius: 4px
+		-webkit-border-radius: 4px
+		border-radius: 4px
+		font-weight: normal
+	.error-message	
+		-moz-border-radius: none
+		-webkit-border-radius: none
+		border-radius: none
+		border: none
+		margin: 0
+		padding:
+			left: 4px
+			right: 0
+	.error, .error-message
+		color: #9E2424
+		-webkit-box-shadow: none
+		-moz-box-shadow: none
+		-ms-box-shadow: none
+		-o-box-shadow: none
+		box-shadow: none
+		text-shadow: none
+
+		
+fieldset
+	border: none
+	margin-bottom: 1em
+	padding: 16px 10px
+	legend
+		color: #e32
+		font:
+			size: 160%
+			weight: bold
+	fieldset
+		margin-top: 0
+		padding: 10px 0 0
+		legend
+			font:
+				size: 120%
+				weight: normal
+		div
+			clear: left
+			margin: 0 20px
+label
+	display: block
+	font-size: 110%
+	margin-bottom: 3px
+	
+input, textarea
+	clear: both
+	font-size: 140%
+	font-family: "frutiger linotype", "lucida grande", "verdana", sans-serif
+	padding: 1%
+	width: 98%
+select
+	clear: both
+	font-size: 120%
+	vertical-align: text-bottom
+select[multiple=multiple]
+	width: 100%
+option
+	font-size: 120%
+	padding: 0 3px
+input[type=checkbox]
+	clear: left
+	float: left
+	margin: 0px 6px 7px 2px
+	width: auto
+div.checkbox
+	label
+		display: inline
+input[type=radio]
+	float: left
+	width: auto
+	margin: 6px 0
+	padding: 0
+	line-height: 26px
+	
+.radio
+	label
+		margin: 0 0 6px 20px
+		line-height: 26px
+input[type=submit]
+	display: inline
+	font-size: 110%
+	width: auto
+	
+/**
+	Notice and Errors **/
+	
+.message
+	clear: both
+	color: #fff
+	font:
+		size: 140%
+		weight: bold
+	margin: 0 0 1em 0
+	padding: 5px
+		
+.success, .message, .cake-error, .cake-debug, .notice, p.error, .error-message
+	background: #ffcc00
+	background-repeat: repeat-x
+	background-image: -moz-linear-gradient(top, #ffcc00, #E6B800)
+	background-image: -ms-linear-gradient(top, #ffcc00, #E6B800)
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffcc00), to(#E6B800))
+	background-image: -webkit-linear-gradient(top, #ffcc00, #E6B800)
+	background-image: -o-linear-gradient(top, #ffcc00, #E6B800)
+	background-image: linear-gradient(top, #ffcc00, #E6B800)
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25)
+	border: 1px solid rgba(0, 0, 0, 0.2)
+	margin-bottom: 18px
+	padding: 7px 14px
+	color: #404040
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5)
+	-webkit-border-radius: 4px
+	-moz-border-radius: 4px
+	border-radius: 4px
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25)
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25)
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25)
+	
+.sucess, .message, .cake-error, p.error, .error-message
+	clear: both
+	color: #fff
+	background: #c43c35
+	border: 1px solid rgba(0, 0, 0, 0.5)
+	background-repeat: repeat-x
+	background-image: -moz-linear-gradient(top, #ee5f5b, #c43c35)
+	background-image: -ms-linear-gradient(top, #ee5f5b, #c43c35)
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ee5f5b), to(#c43c35))
+	background-image: -webkit-linear-gradient(top, #ee5f5b, #c43c35)
+	background-image: -o-linear-gradient(top, #ee5f5b, #c43c35)
+	background-image: linear-gradient(top, #ee5f5b, #c43c35)
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3)
+.success
+	clear: both
+	color: #fff
+	border: 1px solid rgba(0, 0, 0, 0.5)
+	background: #3B8230
+	background-repeat: repeat-x
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#76BF6B), to(#3B8230))
+	background-image: -webkit-linear-gradient(top, #76BF6B, #3B8230)
+	background-image: -moz-linear-gradient(top, #76BF6B, #3B8230)
+	background-image: -ms-linear-gradient(top, #76BF6B, #3B8230)
+	background-image: -o-linear-gradient(top, #76BF6B, #3B8230)
+	background-image: linear-gradient(top, #76BF6B, #3B8230)
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3)
+	
+p.error
+	font:
+		family: Monaco, Consolas, Courier, monospace
+		size: 120%
+		padding: 0.8em
+		margin: 1em 0
+	em
+		font-weight: normal
+		line-height: 140%
+			
+.notice
+	color: #000
+	display: block
+	font-size: 120%
+	padding: 0.8em
+	margin: 1em 0
+	
+.success
+	color: #fff
+
+		
+/**
+	Buttons and button link **/
+	
+input[type=submit]
+	border: 1px solid #bbb
+	-webkit-border-radius: 4px
+	-moz-border-radius: 4px
+	border-radius: 4px
+	text-decoration: none
+
+	
+/**
+	Related **/
+.related
+	clear: both
+	display: block
+	
+/**
+	Debugging **/
+	
+pre
+	color: #000
+	background: #f0f0f0
+	padding: 15px
+	
+.cake-debug-output
+	padding: 0
+	position: relative
+	
+.cake-debug-output > span
+	position: absolute
+	top: 5px
+	right: 5px
+	background: rgba(255,255,255,0.3)
+	-moz-border-radius: 4px
+	-webkit-border-radius: 4px
+	border-radius: 4px
+	padding: 5px 6px
+	color: #000
+	display: block
+	float: left
+	-moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.25), 0 1px 0 rgba(255, 255, 255, 0.5)
+	-webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.25), 0 1px 0 rgba(255, 255, 255, 0.5)
+	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.25), 0 1px 0 rgba(255, 255, 255, 0.5)
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8)
+	
+.cake-debug, .cake-error
+	font-size: 16px
+	line-height: 20px
+	clear: both
+	
+.cake-error > a
+	text-shadow: none
+.cake-error
+	whie-space: normal
+.cake-stack-trace
+	background: rgba(255,255,255, 0.7)
+	color: #333
+	margin: 10px 0 5px 0
+	padding: 10px 10px 0 10px
+	font-size: 120%
+	line-height: 140%
+	overflow: auto
+	position: relative
+	-moz-border-radius: 4px
+	-webkit-border-radius: 4px
+	border-radius: 4px
+	a
+		text-shadow: none
+		background: rgba(255,255, 255, 0.7)
+		padding: 5px
+		-moz-border-radius: 10px
+		-webkit-border-radius: 10px
+		border-radius: 10px
+		margin: 0px 4px 10px 2px
+		font:
+			family: sans-serif
+			size: 14px
+		line-height: 14px
+		display: inline-blick 
+		text-decoration: none
+		-moz-box-shadow: inset 0px 1px 0 rgba(0, 0, 0, 0.3)
+		-webkit-box-shadow: inset 0px 1px 0 rgba(0, 0, 0, 0.3)
+		box-shadow: inset 0px 1px 0 rgba(0, 0, 0, 0.3)
+		
+.cake-stack-trace
+	a
+		text-shadow: none
+		background: rgba(255,255,255,0.7)
+		padding: 5px
+		-moz-border-radius: 10px
+		-webkit-border-radius: 10px
+		border-radius: 10px
+		margin: 0px 4px 10px 2px
+		font:
+			family: sans-serif
+			size: 14px
+		line-height: 14px
+		display: inline-block
+		text-decoration: none
+		-moz-box-shadow: inset 0px 1px 0 rgba(0, 0, 0, 0.3)
+		-webkit-box-shadow: inset 0px 1px 0 rgba(0, 0, 0, 0.3)
+		box-shadow: inset 0px 1px 0 rgba(0, 0, 0, 0.3)
+.cake-code-dump 
+	pre
+		position: relative
+		overflow: auto
+		
+.cake-context
+	margin-bottom: 10px
+	
+.cake-stack-trace
+	pre
+		color: #000
+		background-color: #F0F0F0
+		margin: 0px 0  10px 0
+		padding: 1em
+		overflow: auto
+		text-shadow: none
+		
+/**
+	Excerpt **/
+	
+.cake-code-dump 
+	pre, pre code
+		clear: both
+		font-size: 12px
+		line-height: 15px
+		margin: 4px 2px
+		padding: 4px
+		overflow: auto
+		
+	.code-hightlight
+		display: block
+		background-color: rgba(255, 255, 0, 0.5)
+		
+.code-coverage-results
+	div.code-line
+		padding-left: 5px
+		display: block
+		margin-left: 10px
+	div.uncovered
+		span.content
+			background: #ecc
+	div.covered
+		span.content
+			background: #cec
+	div.ignored
+		span.content
+			color: #aaa
+	span.line-num
+		color: #666
+		display: block
+		float: left
+		width: 20px
+		text-align: right
+		margin-right: 5px
+		strong
+			color: #666
+	div.start
+		border: 1px solid #aaa
+			width: 1px 1px 0px 1px
+		margin-top: 30px
+		padding-top: 5px
+	div.end
+		border: 1px solid #aaa
+		border-width: 0px 1px 1px 1px
+		margin-bottom: 30px
+		padding-bottom: 5px
+	div.realstart
+		margin-top: 0px
+	p.note
+		color: #bbb
+		padding: 5px
+		margin: 5px 0 10px
+		font-size: 10px
+	span.result-bad
+		color: #a00
+	span.result-ok
+		color: #fa0
+	span.result-good
+		color: #0a0
+
+/**
+	Elements **/
+	
+#url-rewriting-warning
+	display: none
+
+/**
+	Permissions **/
+
+div.form.permissions 
+	width: 800px
+	margin: 0 auto
+	.list, .item
+		list-style: none
+		margin: 0
+		padding: 0
+		
+.box
+	margin: 0
+	padding: 0
+.headers
+	padding: 0
+.name
+	padding: 0
+	width: 300px
+	font-size: 1.3em
+	text-align: center
+	
+.method.box
+	height: 50px
+	
+.controller.name
+	background: #bbb
+	height: 50px
+	float: left
+	margin: 0 30px 0 0
+	border: 1px solid #fff
+	
+.method.name, .headers.name
+	width: 250px
+	height: 50px
+	float: left
+	border: 1px solid white
+	background: #eee
+	margin: 0 30px 0 50px
+	
+.groups.box, .headers.box
+	width: 50%
+	float: left
+	clear: none
+	
+.group.item, .header.item
+	float: left
+	
+.permission.box
+	height: 50px
+	width: 100px
+	border: 1px solid white
+	background: #eee
+	
+.header.permission.box
+	background: #bbb
+	
+#content_bar 
+	width: 28%
+	border: 2px solid #ccc
+	background: #fff
+	padding: 5px 0
+	float: left
+	width: 270px
+
+.content_actions
+	width: 100%
+	
+#content_box 
+	ul 
+		list-style: none
+	ul, li
+		margin: 0
+		padding: 0
+	width: 100%
+	max-height: 500px
+	margin: 0 auto
+	overflow-x: hidden
+	overflow-y: hidden
+	padding-top: 5px
+	a
+		text-decoration: none
+		color: inherit
+		&:hover
+			color: inherit
+
+.content_category, .content_item 
+	
+	font-size: 1.5em
+	text-align: center
+	padding: 10px 0
+	margin: 1px 0
+	
+
+.content_category 
+	color: #444
+	background: #ccc
+	&:hover
+		background: #ccc - 10
+
+
+.content_item 
+	border-bottom: 1px solid #eee
+	border-left: 1px solid #eee
+	font-family: 'Ubuntu', sans-serif
+	font-weight: 300
+	font-size: 1.4em
+	background: #eee
+	&:hover
+		background: #eee - 10
+
+
+.clear 
+	clear: both
+.form label 
+	display: block
+
+.form input[type=text] 
+	display: block
+	height: 30px
+	font-size: 2em
+
+.form fieldset 
+	width: 100%
+
+.right 
+	padding: 20px
+	padding-left: 30px
+	float: left
+	width: 60%
+
+	h1
+		font-size: 2em
+	p
+		margin:
+			bottom: 5px
+.actions
+	ul
+		list-style: none
+	text-align: center
+	float: right
+	li
+		float: left
+		margin: 2px
+		background: $cake_blue_level0
+		&:hover 
+			background: $cake_blue_level1
+		a
+			display: block
+			padding: 10px
+			font-size: 1em
+			text-decoration: none
+			color: #fff
+		
+.tabs li a 
+	cursor: default
+.admin
+	width: 95%
+	margin: 0 auto
+.actions ul li
+		
+		
+.admin_links
+	div
+		text-align: center
+		margin: 10px
+		float: left
+		background: $cake_blue_level0
+		&:hover 
+			background: $cake_blue_level1
+			
+		a
+			display: block
+			padding: 50px
+			font-size: 2em
+			text-decoration: none
+			color: #fff
+			
+.ordering
+	color: #444
+	padding: 3px
+	float: left
+	font:
+		size: .5em
+		
+#ContentOrdering
+	width: 60px
+	text-align: center

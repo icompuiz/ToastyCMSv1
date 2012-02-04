@@ -1,0 +1,105 @@
+/*
+ * Admin menu */
+/* line 6, ../sass/admin.menu.sass */
+#top_bar {
+  background: white;
+  width: 100%;
+  height: 45px;
+  border: 0;
+  border-bottom: 3px solid #bbbbbb;
+}
+
+/* line 13, ../sass/admin.menu.sass */
+.admin_menu.actions {
+  text-align: center;
+  float: right;
+}
+/* line 14, ../sass/admin.menu.sass */
+.admin_menu.actions ul {
+  list-style: none;
+}
+/* line 18, ../sass/admin.menu.sass */
+.admin_menu.actions li {
+  float: left;
+  margin: 2px;
+  background: #007b98;
+}
+/* line 22, ../sass/admin.menu.sass */
+.admin_menu.actions li:hover {
+  background: #004759;
+}
+/* line 24, ../sass/admin.menu.sass */
+.admin_menu.actions li a {
+  display: block;
+  padding: 10px;
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+}
+
+/* line 31, ../sass/admin.menu.sass */
+#hide_top_bar {
+  background: #bbbbbb;
+  position: absolute;
+  height: 40px;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  border: 3px solid #bbbbbb;
+  z-index: 99;
+}
+/* line 34, ../sass/admin.menu.sass */
+#hide_top_bar img {
+  height: 80px;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+/* line 48, ../sass/admin.menu.sass */
+.admin_menu {
+  margin-bottom: 20px;
+  text-align: center;
+  float: right;
+}
+/* line 51, ../sass/admin.menu.sass */
+.admin_menu ul {
+  list-style: none;
+}
+/* line 55, ../sass/admin.menu.sass */
+.admin_menu li {
+  float: left;
+  background: #007b98;
+}
+/* line 58, ../sass/admin.menu.sass */
+.admin_menu li:hover {
+  background: #004759;
+}
+/* line 60, ../sass/admin.menu.sass */
+.admin_menu li a {
+  display: block;
+  padding: 10px;
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+}
+/* line 66, ../sass/admin.menu.sass */
+.admin_menu ul.dropdown {
+  width: 200px;
+  position: absolute;
+  margin: 0;
+  border: 3px solid #bbbbbb;
+  z-index: 100;
+  background: white;
+}
+/* line 74, ../sass/admin.menu.sass */
+.admin_menu ul.dropdown li {
+  border: 0;
+  width: 200px;
+  margin: 0;
+  margin-bottom: 1px;
+}
+/* line 79, ../sass/admin.menu.sass */
+.admin_menu ul.dropdown li:last-child {
+  margin: 0;
+}

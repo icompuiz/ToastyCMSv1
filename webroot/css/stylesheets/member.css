@@ -1,0 +1,68 @@
+/* line 3, ../sass/member.sass */
+.profile_left, .profile_right {
+  float: left;
+}
+
+/* line 5, ../sass/member.sass */
+.profile_left {
+  width: 30%;
+}
+
+/* line 7, ../sass/member.sass */
+.profile_right {
+  width: 62%;
+}
+
+/* line 10, ../sass/member.sass */
+.member_profile .member_title {
+  font-size: 2em;
+  font-weight: bold;
+}
+/* line 14, ../sass/member.sass */
+.member_profile .member_avatar {
+  padding: 5px;
+  width: 95%;
+  border: 3px solid #eeeeee;
+}
+/* line 17, ../sass/member.sass */
+.member_profile .member_avatar img {
+  width: 100%;
+}
+/* line 20, ../sass/member.sass */
+.member_profile .member_info {
+  margin-left: 5px;
+  border: 3px solid #eeeeee;
+  width: 100%;
+  padding: 20px;
+}
+/* line 27, ../sass/member.sass */
+.member_profile .member_field {
+  border-bottom: 1px solid #eeeeee;
+  margin-top: 10px;
+  padding: 10px;
+}
+/* line 34, ../sass/member.sass */
+.member_profile .member_header {
+  float: left;
+  width: 20%;
+  color: #edaca6;
+  font-weight: bold;
+  padding: 5px;
+}
+/* line 41, ../sass/member.sass */
+.member_profile .member_detail {
+  float: left;
+  width: 75%;
+  text-align: left;
+  padding: 5px;
+}
+
+/* line 47, ../sass/member.sass */
+.member_actions.actions {
+  text-align: center;
+  float: none;
+}
+/* line 50, ../sass/member.sass */
+.member_actions.actions li {
+  float: none;
+}
