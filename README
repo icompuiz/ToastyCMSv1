@@ -1,0 +1,48 @@
+ToastyCMS is a content management system that focuses on ease of deployment of simple websites for 
+individuals and organizations. It is built on the CakePHP Web Frame work (cakephp.org) and draws from
+CakePHP's simple design and ease of use. 
+
+ToastyCMS Key Features:
+  - User and Group Management
+	- Media Management
+		- In-browser File Management
+	- Content Management
+		- WYSIWYG Editor
+		- JavaScript and Styles Editor
+	- Template Management
+		- Style Management 
+
+Site Styling:
+	ToastyCMS has two styling modes. If you choose to use the traditional direct CSS mode all styling
+	is done using CSS. However, you can choose to style your site using the Compass CSS (compass-style.org)
+	authoring framework.
+	
+	Compass allows designers:
+	- Experience cleaner markup without presentational classes.
+	- It’s chock full of the web’s best reusable patterns.
+	- Developing a personal framework is simple.
+	- Compass mixins make CSS3 easy.
+	- Download and create extensions with ease.
+	
+AddOns and Extensions:
+Because this CMS is build on CakePHP, ToastyCMS is fully extensible using CakePHP's amazing Plugin framework. See http://book.cakephp.org/2.0/en/plugins.html
+
+Getting Started
+
+1) Download Toasty to your web directory
+	$ git clone git://github.com/icompuiz/ToastyCMS.git
+	$ wget https://nodeload.github.com/icompuiz/ToastyCMS/zipball/master
+		- This will download a zip archive, unzip this archive to your site.
+2) Execute the perl script install.pl
+	$ perl install.pl
+		- this will create a database and install the tables
+		- set the database connection settings in Config/database.php
+3) Go to your website:
+	- if your site is http://www.example.com
+	- go to http://www.example.com/manager
+	- login with username: root
+	- user password: root
+		> change this password
+		
+Play around with it, more documentation is to come. 12/27/2011
+
