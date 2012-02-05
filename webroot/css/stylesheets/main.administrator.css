@@ -796,7 +796,7 @@ pre {
  * Permissions */
 /* line 610, ../sass/main.administrator.sass */
 div.form.permissions {
-  width: 800px;
+  max-width: 2000px;
   margin: 0 auto;
 }
 /* line 613, ../sass/main.administrator.sass */
@@ -851,7 +851,6 @@ div.form.permissions .list, div.form.permissions .item {
 
 /* line 647, ../sass/main.administrator.sass */
 .groups.box, .headers.box {
-  width: 50%;
   float: left;
   clear: none;
 }
