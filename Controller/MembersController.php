@@ -64,7 +64,7 @@ class MembersController extends AppController {
 					$name = $picture['path']['name'];
 					$ext = $this->Strings->getExt($name); 
 								
-					$picture['name'] = $this->request->data['User']['full_name'].mktime().$ext;
+					$picture['name'] = $this->request->data['User']['full_name'].$ext;
 					$picture = $this->MediaFile->upload($picture, 'Members');
 					$this->request->data['Member']['avatar'] = $picture['MediaFile']['path']; 
 					
@@ -155,7 +155,7 @@ class MembersController extends AppController {
 				$name = $picture['path']['name'];
 				$ext = $this->Strings->getExt($name); 
 							
-				$picture['name'] = $this->request->data['User']['full_name'].mktime().$ext;
+				$picture['name'] = $this->request->data['User']['full_name'].$ext;
 				$picture = $this->MediaFile->upload($picture, 'Members');
 				$this->request->data['Member']['avatar'] = $picture['MediaFile']['path']; 
 				
