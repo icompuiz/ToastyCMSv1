@@ -113,9 +113,4 @@ class AppController extends Controller {
 		return false;
 	}
 	
-	public function isAuthorized($user) {
-		if (isset($user['group_id']) && ($user['group_id'] == 1))
-			return true;
-		return true;
-	}
 }
