@@ -796,7 +796,7 @@ pre {
  * Permissions */
 /* line 610, ../sass/main.administrator.sass */
 div.form.permissions {
-  max-width: 2000px;
+  width: 2000px;
   margin: 0 auto;
 }
 /* line 613, ../sass/main.administrator.sass */
