@@ -17,10 +17,34 @@ class EventsController extends AppController {
  * @return void
  */
 	public function index() {
-		$this->Event->recursive = 0;
-		$this->set('events', $this->paginate());
-		$this->render('index');
+		// $this->Event->recursive = 0;
+		// $this->set('events', $this->paginate());
+		
+		$events = $this->Event->find('all', array('order' => array('Event.start_time ASC')));
+		
+		foreach ($events as &$event) {
+		
+			$event['Event']['past'] = $this->isPast($event['Event']['end_time']);
+		}
+		
+		$this->set(compact('events'));
+		$this->set('title_for_page', 'Events');
 
+
+	}
+	
+	private function isPast($endDate) {
+
+		$en_datetime = explode(" ", $endDate);
+		$en_date = explode("-", $en_datetime[0]);
+		$en_time = explode(":", $en_datetime[1]);
+
+		$en_date = date("F j, Y", mktime(0,0,0, $en_date[1], $en_date[2], $en_date[0]));
+		$today = date("F j, Y");
+		
+		return strtotime($today) > strtotime($en_date);
+
+	
 	}
 	
 
@@ -36,7 +60,9 @@ class EventsController extends AppController {
 		if (!$this->Event->exists()) {
 			throw new NotFoundException(__('Invalid event'));
 		}
-		$this->set('event', $this->Event->read(null, $id));
+		$event = $this->Event->read(null, $id);
+		$this->set('event', $event);
+		$this->set('title_for_page', $event['Event']['title']);
 		$this->render('view');
 
 	}
@@ -382,7 +408,7 @@ class EventsController extends AppController {
 		$this->set('prev', $prev);
 		$this->set('next', $next);
 		$this->set('cur' , $cur);
-		$this->set('title_for_layout', $this->name . " | Calendar of Events");
+		$this->set('title_for_page', $this->name . " | Calendar of Events");
 
 	
 	}
@@ -455,18 +481,32 @@ class EventsController extends AppController {
 		$this->delete($id);
 	}
 	
+	public function manager_user($id) {
+		$this->layout = 'management';
+		$this->user($id);
+	}
+	
 	public function user_index() {
 		$this->layout = 'user_management';
 		$user = $this->Auth->user();
 		
-		$events = $this->Event->find('all', array('conditions' => array('Event.user_id' => $user['id'])));
+		$events = $this->Event->find('all', array('conditions' => array('Event.user_id' => $user['id']), 'order' => array('Event.start_time ASC')));
+		
+		foreach ($events as &$event) {
+			$event['Event']['past'] = $this->isPast($event['Event']['end_time']);
+		}
+		
 		$this->set(compact('events'));
 		$this->render('index');
 	}
 	
 	public function user($id=null) {
 	
-		$events = $this->Event->find('all', array('conditions' => array('Event.user_id' => $id)));
+		$events = $this->Event->find('all', array('conditions' => array('Event.user_id' => $id), 'order' => array('Event.start_time ASC')));
+		foreach ($events as &$event) {
+		
+			$event['Event']['past'] = $this->isPast($event['Event']['end_time']);
+		}
 		$this->set(compact('events'));
 		
 		$user = $this->Event->User->read('full_name', $id);

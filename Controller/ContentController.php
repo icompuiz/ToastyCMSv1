@@ -39,7 +39,7 @@ class ContentController extends AppController {
 	
 	public function home() {
 		
-		$events = $this->Event->find('all', array('conditions'=>array('Event.end_time > NOW()')));
+		$events = $this->Event->find('all', array('conditions'=>array('Event.end_time > NOW()'), 'order' => array('Event.start_time ASC')));
 		
 		$events_feed['title'] = __('Upcoming Events', true);
 		
@@ -55,7 +55,7 @@ class ContentController extends AppController {
 		
 		
 		$news_feed = $this->RssFeed->bbcFeed();
-		$twitter_feed = $this->RssFeed->twitterFeed('ritglobalunion');
+		// $twitter_feed = $this->RssFeed->twitterFeed('ritglobalunion');
 		
 		
 		$this->set(compact('events','events_feed','news_feed', 'twitter_feed'));

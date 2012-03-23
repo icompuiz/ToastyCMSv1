@@ -22,11 +22,11 @@ $('.feed').each(function(index) {
 		$(this).hover(function() {
 			feed_nav  = $(this).find('.feed_nav');
 			feed_nav.css("display", "block");
-			$(this).find('.elements').css("top", "-24px");
+			$(this).find('.elements').css("top", "-22px");
 		}, function() {
 			feed_nav  = $(this).find('.feed_nav');
 			feed_nav.css("display", "none");
-			$(this).find('.elements').animate({top: "+=24"}, 2);
+			$(this).find('.elements').animate({top: "+=22"}, 2);
 		
 		});
 		

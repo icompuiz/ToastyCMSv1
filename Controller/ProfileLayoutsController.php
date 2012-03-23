@@ -204,19 +204,19 @@ class ProfileLayoutsController extends AppController {
 
 	}
 	
-	public function manager_index() {
+	public function admin_index() {
 		$this->render('index');
 	}
-	public function manager_add() {
+	public function admin_add() {
 		$this->add();
 		$this->render('add');
 	}
-	public function manager_edit($id=null) {
+	public function admin_edit($id=null) {
 		$this->edit($id);
 		$this->render('edit');
 
 	}
-	public function manager_delete($id=null) {
+	public function admin_delete($id=null) {
 		$this->delete($id);
 	}
 }

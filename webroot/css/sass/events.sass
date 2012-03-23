@@ -1,6 +1,14 @@
 $red: #e32
 $lightred: #edaca6
+.event_left, .event_right
+	float: left
 
+.profile_left
+	width: 30%
+
+.profile_right
+	width: 62%
+	
 .event_post
 	border: 3px solid #eee
 	padding: 20px
@@ -25,19 +33,19 @@ $lightred: #edaca6
 		margin:
 			left: 50px
 			bottom: 20px
-		.event_title, .event_date
 .event_title
+	margin-bottom: 10px
 	font:
-		size: 2em
+		size: 1.7em
 		weight: bold
 	text-align: center
 	a
 		border: none
-		color: inherit
+		color: $red
 		&:hover
 			border: none
 	
-.event_time, .event_location, .event_description, .event_owner
+.event_field
 	border:
 		bottom: 1px solid #eee
 	margin:
@@ -56,10 +64,12 @@ $lightred: #edaca6
 		text-align: left
 
 .event_view
+	.event_left
+		width: 30%
+	.event_right
+		width: 62%
 	.event_image
 		padding: 5px
-		float: left
-		width: 30%
 		img
 			width: 100%
 		border: 3px solid #eee
@@ -67,8 +77,6 @@ $lightred: #edaca6
 		margin:
 			left: 5px
 		border: 3px solid #eee
-		float: left
-		width: 62%
 		padding: 20px
 	.event_description
 		.event_detail
@@ -77,3 +85,14 @@ $lightred: #edaca6
 			top: 20px
 		img
 			width: 100%
+.events_heading
+	font:
+		weight: bolder
+		size: 2.4em
+	text-align: center
+	
+	
+.past_events
+	border: 3px solid #EAA
+	margin-top: 20px
+	padding: 20px

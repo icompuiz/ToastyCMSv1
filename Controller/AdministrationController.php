@@ -10,6 +10,11 @@ class AdministrationController extends AppController {
 
 	}
 	
+	public function admin_member_groups() {
+	
+		$this->render('member_groups');
+	}
+	
 	
 	public function beforeFilter() {
 		parent::beforeFilter();

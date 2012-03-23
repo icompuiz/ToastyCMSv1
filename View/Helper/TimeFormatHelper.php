@@ -15,11 +15,11 @@ class TimeFormatHelper extends AppHelper {
 		$st_date = date("F j, Y", mktime(0,0,0, $st_date[1], $st_date[2], $st_date[0]));
 		$en_date = date("F j, Y", mktime(0,0,0, $en_date[1], $en_date[2], $en_date[0]));
 
-		$st_time = date("h:i a", mktime($st_time[0], $st_time[1], $st_time[2],0,0,0));
-		$en_time = date("h:i a", mktime($en_time[0], $en_time[1], $en_time[2],0,0,0));
+		$st_time = date("g:i a", mktime($st_time[0], $st_time[1], $st_time[2],0,0,0));
+		$en_time = date("g:i a", mktime($en_time[0], $en_time[1], $en_time[2],0,0,0));
 
-		$sten_date = $st_date == $en_date;
-		$sten_time = $st_time == $en_time;		
+		$sten_date = strtotime($st_date) == strtotime($en_date);
+		$sten_time = strtotime($st_time) == strtotime($en_time);		
 
 		// handle date
 		$date_out = "";
@@ -50,7 +50,7 @@ class TimeFormatHelper extends AppHelper {
 		$en_date = date("F j, Y", mktime(0,0,0, $en_date[1], $en_date[2], $en_date[0]));
 		$today = date("F j, Y");
 		
-		return $today > $en_date;
+		return strtotime($today) > strtotime($en_date);
 	}
 	
 	function isCurrent($current, $start, $endDate) {
@@ -71,7 +71,7 @@ class TimeFormatHelper extends AppHelper {
 		$today   = date("F j, Y", mktime(0,0,0, $cu_date[1], $cu_date[2], $cu_date[0]));
 		$st      = date("F j, Y", mktime(0,0,0, $st_date[1], $st_date[2], $st_date[0]));
 		
-		return $today < $en_date && $today > $st;
+		return strtotime($today) < strtotime($en_date) && strtotime($today) > strtotime($st);
 	
 	}
 	

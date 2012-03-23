@@ -34,6 +34,8 @@ class GalleriesController extends AppController {
 			
 			});					
 		');
+		$this->set('title_for_page', 'Galleries');
+
 	}
 	
 	private function retrieveContent() {
@@ -62,6 +64,7 @@ class GalleriesController extends AppController {
 			$func = $gallery;
 			$this->$func($gal);
 		}
+
 	}
 
 /**
@@ -301,6 +304,8 @@ class GalleriesController extends AppController {
 			
 			});					
 		');
+		$this->set('title_for_page', $gallery['Gallery']['name']);
+
 		$this->render('supported/view_facebook');
 
 	}
@@ -411,6 +416,8 @@ class GalleriesController extends AppController {
 			$("a[rel^=\'prettyPhoto[vm_gal]\']").prettyPhoto();
 
 		');
+		$this->set('title_for_page', $gallery['Gallery']['name']);
+
 		$this->render('supported/view_vimeo');
 		
 	}

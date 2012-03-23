@@ -1,4 +1,5 @@
 <? 
+$url = $_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
 if ( isset($admin_mode) ) { 
 	echo $this->Actions->events_view2($event);
 } else { 
@@ -12,7 +13,10 @@ if ( isset($admin_mode) ) {
 	<div class="event_left">
 		<div class="event_image">
 			<?=$this->Html->image(substr($event['Event']['picture'],4))?>
+		<div id="fb-root"></div>
+		<script src="http://connect.facebook.net/en_US/all.js#appId=205283036181395&amp;xfbml=1"></script><fb:like href="<?=$url?>" send="false" width="250" show_faces="true" font=""></fb:like>
 		</div>
+
 	</div>
 	<div class="event_right">
 		<div class="event_info">

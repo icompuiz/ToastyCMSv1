@@ -214,26 +214,33 @@ class SiteLayoutsController extends AppController {
 	}
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->layout = 'management'; 
 	}
 	
-	public function manager_index() {
+	public function admin_index() {
+		$this->layout = 'administrator'; 
 		$this->index();
 		$this->render('index');
+
 	}
-	public function manager_add() {
+	public function admin_add() {
+		$this->layout = 'administrator'; 
 		$this->add();
 		$this->render('add');
+
 	}
-	public function manager_edit($id = null) {
+	public function admin_edit($id = null) {
+		$this->layout = 'administrator'; 
 		$this->edit($id);
 		$this->render('edit');
+		
 	}
-	public function manager_view($id = null) {
+	public function admin_view($id = null) {
+		$this->layout = 'administrator'; 
 		$this->view();
 		$this->render('view');
+		
 	}
-	public function manager_delete($id = null) {
+	public function admin_delete($id = null) {
 		$this->delete($id);
 	}
 }

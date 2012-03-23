@@ -34,6 +34,7 @@
 <div id="top_bar">
 <div class="admin_menu actions">
 	<ul>
+               <li><?=$this->Html->link('User Home', '/user')?></li>
 		<li><?=$this->Html->link('View Site', '/')?></li>
 		<li><?=$this->Html->link('Logout', '/users/logout')?></li>
 	</ul>

@@ -1,4 +1,4 @@
-<?=$this->Actions->backToManagement()?>
+<?=$this->Actions->backToAdministration()?>
 <?=$this->ContentBar->siteLayouts($siteLayouts)?>
 <div class="right">
 <h1>Site Layouts</h1>

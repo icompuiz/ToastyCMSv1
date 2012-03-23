@@ -1,29 +1,18 @@
-<? if ( isset($admin_mode) ) { 
-	echo $this->Actions->events_index();
-} ?>
-<div class="events index">
-	<h2><?php
-		if (isset($owner)) {
-			echo "${owner}'s ";
-		}
-		echo __('Events');
-		?>
-	</h2>
-	<?php
-		$i = 0;
-		foreach ($events as $event): ?>
-		<div class="event_post">
+<? 
+function outputEvent($event,$past=false, $hack, $admin_mode=false) {
+?>
+<div class="event_post<?=$past==true ? " past" : ""?>">
 			<div class="event_image">
-				<?=$this->Html->image(substr($event['Event']['picture'], 4))?>
+				<?=$hack->Html->image(substr($event['Event']['picture'], 4))?>
 			</div>
 			<div class="event_info">
 				<div class="event_title">
-					<?=$this->Html->link($event['Event']['title'], array('action' => 'view', $event['Event']['id']))?>
+					<?=$hack->Html->link($event['Event']['title'], array('action' => 'view', $event['Event']['id']))?>
 				</div>
 				<div class="event_field">
 					<div class="event_header">Time:</div>
 					<div class="event_detail">
-						<?=$this->TimeFormat->getTime($event['Event']['start_time'], $event['Event']['end_time'])?>
+						<?=$hack->TimeFormat->getTime($event['Event']['start_time'], $event['Event']['end_time'])?>
 					</div>
 					<div class="clear"></div>
 				</div>
@@ -40,11 +29,48 @@
 					</div>
 					<div class="clear"></div>
 				</div>
-				<? if ( isset($admin_mode) ) {
-					echo $this->Actions->events_post($event);
+				<? if ( $admin_mode ) {
+					echo $hack->Actions->events_post($event);
 				} ?>
 			</div>
 			<div class="clear"></div>
 		</div>
-	<?php endforeach ?>
+<?
+}
+
+if ( isset($admin_mode) ) { 
+	echo $this->Actions->events_index();
+} ?>
+<div class="events index">
+	<div class="current_events">
+	<h1 class="events_heading"><?php
+
+		if (isset($owner)) {
+			echo "${owner}'s ";
+		}
+		echo __('Upcoming Events');
+		?>
+	</h1>
+	<?php
+		foreach ($events as $event): 
+		if ( $event['Event']['past'] )
+		continue;
+		outputEvent($event, false, $this, isset($admin_mode));
+		endforeach ?>
+	</div>
+	<div class="past_events">
+		<h1 class="events_heading"><?php
+			if (isset($owner)) {
+				echo "${owner}'s ";
+			}
+			echo __('Past Events');
+			?>
+		</h1>
+		<?php
+			foreach ($events as $event): 
+			if ( !$event['Event']['past'] )
+			continue;
+			outputEvent($event, true, $this, isset($admin_mode));
+			endforeach ?>
+	</div>
 </div>

@@ -1,6 +1,19 @@
 <?php
 
+	// check if a user is logged in
+	$group_id = $this->Session->read('Auth.User.group_id');
+	$user_id = $this->Session->read('Auth.User.id');
 
+	if ( $group_id == 1 || $group_id == 2 ) {
+		$admin = true;
+	} else {
+		$admin = false;
+	}
+
+	$session_active = false;
+	if ($group_id) {
+		$session_active = true;
+	}
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -34,8 +47,14 @@
 <div id="top_bar">
 <div class="admin_menu actions">
 	<ul>
+	<?php
+		if ( !empty($admin) ) {
+		?>
+		<li><?=$this->Html->link('Administration Home', '/admin')?></li>
+		<?php
+		}
+	?>
 		<li><?=$this->Html->link('Management Home', '/management')?></li>
-                <li><?=$this->Html->link('Site Administration', '/administration')?></li>
 		<li><?=$this->Html->link('View Site', '/')?></li>
 		<li><?=$this->Html->link('Logout', '/users/logout')?></li>
 	</ul>
@@ -52,7 +71,6 @@
 			<?php echo $content_for_layout; ?>
 
 		</div>
-		
 	</div>
 </body>
 <?php

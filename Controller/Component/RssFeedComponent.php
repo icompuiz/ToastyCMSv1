@@ -52,7 +52,7 @@ class RssFeedComponent extends Component
 	}
 	
 	function twitterFeed($screenName, $count=10) {
-	
+		
 		$url = "http://api.twitter.com/1/statuses/user_timeline.rss?screen_name=$screenName";
 		$feed = $this->getFeed($url);
 		$feed = $feed['rss'];
@@ -61,7 +61,7 @@ class RssFeedComponent extends Component
 		
 		$counter = 0;
 		foreach ($items as $item) {
-		
+			
 			$counter++;
 			if ($counter > $count)
 				break;
@@ -74,7 +74,6 @@ class RssFeedComponent extends Component
 			$tmp['text'] = $item['description'];
 			$tmp['link'] = $item['link'];
 			$retArray[] = $tmp;
-			
 			
 		}
 		

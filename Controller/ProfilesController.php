@@ -254,7 +254,7 @@ class ProfilesController extends AppController {
 		return $output;
 	}
 
-	public function manager_add($member_id=null) {
+	public function admin_add($member_id=null) {
 		$this->layout = 'management';
 		
 		$this->add($member_id);
@@ -262,7 +262,7 @@ class ProfilesController extends AppController {
 		
 	}
 	
-	public function manager_edit($member_id=null) {
+	public function admin_edit($member_id=null) {
 		$this->layout = 'management';
 		
 		$this->edit($member_id);
@@ -270,7 +270,7 @@ class ProfilesController extends AppController {
 		
 	}
 	
-	public function manager_view($member_id=null) {
+	public function admin_view($member_id=null) {
 		$this->layout = 'management';
 	
 		$this->view($member_id);

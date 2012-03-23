@@ -1,3 +1,12 @@
+$blue: #003642
+$red: #e32
+$green: #119f57
+$yellow: #ffa201
+$blueBorder: #e2e2e2
+$redBorder: #edaca6
+$lightblue: #698696
+$plain: #fff
+
 $cake_blue: #003d4c
 $cake_blue_level1: #004759
 $cake_blue_level0: #007B98
@@ -608,7 +617,7 @@ pre
 	Permissions **/
 
 div.form.permissions 
-	width: 2000px
+	max-width: 2000px
 	margin: 0 auto
 	.list, .item
 		list-style: none
@@ -763,8 +772,8 @@ div.form.permissions
 	width: 95%
 	margin: 0 auto
 .actions ul li
-		
-		
+	box-shadow: 1px 1px 2px black
+
 .admin_links
 	div
 		text-align: center
@@ -773,6 +782,7 @@ div.form.permissions
 		background: $cake_blue_level0
 		&:hover 
 			background: $cake_blue_level1
+		box-shadow: 1px 1px 2px black
 			
 		a
 			display: block
@@ -791,3 +801,20 @@ div.form.permissions
 #ContentOrdering
 	width: 60px
 	text-align: center
+	
+.user-links
+	float: right
+	margin: 
+		bottom: 10px
+	ul
+		li
+			display: inline
+			padding: 5px
+			background: #eee
+			border: 2px solid $blueBorder
+			margin: 
+				left: 5px
+			a
+				border: none
+				&:hover
+					border: none

@@ -346,23 +346,23 @@ class MembersController extends AppController {
 		
 	}
 	
-	public function manager_add($group_id) {
-		$this->layout = 'management';
+	public function admin_add($group_id) {
+		$this->layout = 'administrator';
 
 		$this->add($group_id);
 		$this->render('add');
 	}
-	public function manager_edit($member_id) {
-		$this->layout = 'management';
+	public function admin_edit($member_id) {
+		$this->layout = 'administrator';
 		$this->edit($member_id);
 		$this->render('edit');
 	}
-	public function manager_delete($member_id) {
+	public function admin_delete($member_id) {
 		$this->delete($member_id);
 	}
 	
-	public function manager_index() {
-		$this->layout = 'management';
+	public function admin_index() {
+		$this->layout = 'administrator';
 		$this->redirect(array('controller' => 'member_groups', 'action' => 'index'));
 	}
 	

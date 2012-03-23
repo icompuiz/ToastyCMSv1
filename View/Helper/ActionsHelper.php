@@ -35,8 +35,8 @@ class ActionsHelper extends AppHelper {
 	public function backToMembersGroups() {
 		$this->pre();
 		?>
-			<li><?php echo $this->Html->link(__('Back to Members and Groups'), array('manager' => true, 'controller' => 'management', 'action' => 'member_groups'));?></li>
-			<li><?php echo $this->Html->link(__('Back to Management Panel'), array('manager' => true, 'controller' => 'management', 'action' => 'index'));?></li>
+			<li><?php echo $this->Html->link(__('Back to Members and Groups'), array('admin' => true, 'controller' => 'administration', 'action' => 'member_groups'));?></li>
+			<li><?php echo $this->Html->link(__('Back to Administration Panel'), array('admin' => true,'controller' => 'administration', 'action' => 'index'));?></li>
 		<?php
 		$this->post();
 	}
@@ -91,7 +91,7 @@ class ActionsHelper extends AppHelper {
 	public function contents_edit() {
 		$this->pre();
 		?>
-		<li><?php echo $this->Form->postLink(__('View Content'), array('controller' => 'content', 'action' => 'display', $this->Form->value('Content.alias')), null,  __('Are you sure you want to view? All changes will be lost.')); ?></li>
+		<li><?php echo $this->Form->postLink(__('View Content'), array('manager' => false, 'controller' => 'content', 'action' => 'display', $this->Form->value('Content.alias')), null,  __('Are you sure you want to view? All changes will be lost.')); ?></li>
 		<?$this->cancel('categories');?>
 		<li><?php echo $this->Form->postLink(__('Delete Content'), array('action' => 'delete', $this->Form->value('Content.id')), null, __('Are you sure you want to delete %s? Action is irrevesible', $this->Form->value('Content.title'))); ?></li>
 		<?
@@ -217,7 +217,6 @@ class ActionsHelper extends AppHelper {
 	public function events_index() {
 		$this->pre();
 		?>
-		
 		<li><?php echo $this->Html->link(__('New Event'), array('manager' => true,'action' => 'add')); ?></li>
 		
 		<?
@@ -225,6 +224,19 @@ class ActionsHelper extends AppHelper {
 		$this->post();
 
 	}
+	
+	public function manager_user_events_index() {
+	$this->pre();
+		?>
+			<li><?php echo $this->Html->link(__('Back to All Events'), array('manager' => true, 'controller' => 'events', 'action' => 'index'));?></li>
+			<li><?php echo $this->Html->link(__('New Event'), array('manager' => true,'action' => 'add')); ?></li>
+		
+		<?
+		$this->_backToManagement();
+		$this->post();
+	
+	}
+	
 	public function events_view2($event) {
 	
 		$this->pre();

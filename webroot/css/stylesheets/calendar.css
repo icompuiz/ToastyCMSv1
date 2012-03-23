@@ -40,7 +40,7 @@
 }
 
 /* line 45, ../sass/calendar.sass */
-.calendar_day.event {
+.event_list {
   font-size: 0.7em;
 }
 

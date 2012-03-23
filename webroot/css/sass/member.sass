@@ -1,27 +1,32 @@
 $red: #e32
 $lightred: #edaca6
+
+.profile_left, .profile_right
+	float: left
+
+.profile_left
+	width: 30%
+
+.profile_right
+	width: 62%
+
 .member_profile
-	text-align: center
-	padding: 20px
-	margin:
-		top: 10px
 	.member_title
 		font:
 			size: 2em
 			weight: bold
 	.member_avatar
+		width: 95%
 		padding: 5px
-		float: left
-		width: 30%
+		border: 3px solid #eee
 		img
 			width: 100%
-		border: 3px solid #eee
 	.member_info
 		margin:
 			left: 5px
 		border: 3px solid #eee
 		float: left
-		width: 62%
+		width: 100%
 		padding: 20px
 
 	.member_field
@@ -43,3 +48,9 @@ $lightred: #edaca6
 		width: 75%
 		text-align: left
 		padding: 5px
+		
+.member_actions.actions 
+	text-align: center
+	float: none
+	li
+		float: none

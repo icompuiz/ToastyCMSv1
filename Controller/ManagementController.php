@@ -8,11 +8,6 @@ class ManagementController extends AppController {
 		$this->render('index');
 		
 	}
-	public function manager_member_groups() {
-	
-		$this->render('member_groups');
-	}
-	
 	
 	public function beforeFilter() {
 		parent::beforeFilter();

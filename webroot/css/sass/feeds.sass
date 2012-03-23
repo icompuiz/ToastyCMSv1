@@ -7,6 +7,7 @@
 	
 .feed
 	width: 399px
+	max-height: 384px
 	margin:
 		bottom: 20px
 	float: left
@@ -33,8 +34,7 @@
 			color: inherit
 	border: 
 		bottom: 1px solid #e2e2e2
-	margin:
-		bottom: 10px
+
 	text-align: center
 .feed-list
 	list-style: none
@@ -56,8 +56,7 @@
 	width: 60px
 	height: 80px
 	img
-		min-width: 100%
-		height: 100%
+		width: 100%
 	a
 		width: 100%
 		height: 100
@@ -72,3 +71,27 @@
 .feed-element-text
 	width: 76%
 	font-size: 0.8em
+	
+.feed_nav
+	text-align: center
+	position: relative
+	z-index: 99
+	display: none
+	div
+		width: 20px
+		height: 22px
+		overflow: hidden
+		box-shadow: 1px 1px 2px #888
+		img
+			position: relative
+		&:hover
+			img
+				top: -22px	
+.next, .prev
+	float: left
+.prev
+	img
+		left: -20px
+
+		
+	
