@@ -24,8 +24,6 @@ Site Styling:
 	- Compass mixins make CSS3 easy.
 	- Download and create extensions with ease.
 	
-AddOns and Extensions:
-Because this CMS is build on CakePHP, ToastyCMS is fully extensible using CakePHP's amazing Plugin framework. See http://book.cakephp.org/2.0/en/plugins.html
 
 Getting Started
 
