@@ -2830,3 +2830,15 @@
 2012-09-13 07:53:44 Error: [MissingControllerException] Controller class ImgController could not be found.
 #0 /home/ubuntu/websites/ToastyCMS/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2012-09-13 07:55:22 Error: [MissingControllerException] Controller class CssController could not be found.
+#0 /home/ubuntu/websites/ToastyCMS/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-09-13 07:55:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /home/ubuntu/websites/ToastyCMS/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-09-13 07:55:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /home/ubuntu/websites/ToastyCMS/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-09-13 07:55:22 Error: [MissingControllerException] Controller class JsController could not be found.
+#0 /home/ubuntu/websites/ToastyCMS/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

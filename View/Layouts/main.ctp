@@ -81,7 +81,7 @@ if ($group_id) {
 </div>
 </body>
 <?php
-  $js = array('jquery', 'dropdown', 'dropdown2');
+  $js = array('jquery', 'dropdown');
 	//<!--Specific Page Scripts-->
 	if ( isset($js_files) && $js_files != '') {
 		$js_files = split(',', $js_files);
