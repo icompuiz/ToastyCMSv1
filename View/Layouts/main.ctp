@@ -1,5 +1,4 @@
 <?php
-
 // check if a user is logged in
 $group_id = $this->Session->read('Auth.User.group_id');
 $user_id = $this->Session->read('Auth.User.id');
@@ -14,7 +13,6 @@ $session_active = false;
 if ($group_id) {
 	$session_active = true;
 }
-
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -24,10 +22,11 @@ if ($group_id) {
 			<?=$site_name?>
 			<? if (isset($title_for_page)) echo "| $title_for_page" ?>
 		</title>
+		
 	<?php
 
 		echo $this->Html->meta('icon');
-		$css = array('stylesheets/screen','stylesheets/styles','stylesheets/main_forms');
+		$css = array('stylesheets/screen','stylesheets/styles','stylesheets/main_forms', 'stylesheets/nyubalsa/dropdown2');
 
 		if ( isset( $css_files ) && $css_files != '' ) {
 			$css_files = split(',', $css_files);
@@ -43,29 +42,46 @@ if ($group_id) {
 			echo "</style>";
 		}
 	?>
-	
+	<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body class="two-col">
+<div id="pre_header">
+	<div id="quicklinks">
+		<a onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, menu1, '122px')" onMouseout="delayhidemenu()">
+			<?=$this->Html->image('nyubalsa/quicklinks.gif')?>
+		</a>
+		<a onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, menu2, '122px')" onMouseout="delayhidemenu()">
+			<?=$this->Html->image('nyubalsa/schools.gif')?>
+		</a>
+	</div>
+	<div class="clear">&nbsp;</div>
+</div>
+<div class="clear">&nbsp;</div>
 <div id="container">
-
-	<div id="content">
-		<div id="breadCrumbs">
-			<?=$this->Html->getCrumbs(" | ", "Home")?>
+	<div class="header">
+		&nbsp;
+		<div class="navigation_menu">
+			<?=$this->Menu->output($navigationMenu)?>
 		</div>
+	</div>
+	<div class="content">
+		
+		<!--div id="breadCrumbs">
+			<?=$this->Html->getCrumbs(" | ", "Home")?>
+		</div-->
 		<div id="sessionFlash">
 			<?=$this->Session->flash()?>
 		</div>
-		<div id="main">
+		<div class="main">
 			<?=$content_for_layout?>
 		</div>
 	</div>
-	<div id="footer">
-		
-	</div>
+</div>
+<div class="footer">
 </div>
 </body>
 <?php
-  $js = array('jquery', 'dropdown');
+  $js = array('jquery', 'dropdown', 'dropdown2');
 	//<!--Specific Page Scripts-->
 	if ( isset($js_files) && $js_files != '') {
 		$js_files = split(',', $js_files);

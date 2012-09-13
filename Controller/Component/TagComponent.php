@@ -31,11 +31,17 @@ class TagComponent extends Component {
 					
 					if ($tmp[0] == 'src' || $tmp[0] == 'source') {
 						$source = $tmp[1];
-						if ( file_exists("./img/mediafiles/$source") ) {
+						$path = APP . WEBROOT_DIR . DS;
+						
+						if (  file_exists( $path . "img" . DS . $source) ) {
+							$source = $source;
+						
+						} elseif ( file_exists( $path . "img" . DS . "mediafiles" . DS . $source) ) {
 							$source = "mediafiles/$source";
 						} else {
 							$source = "image_not_found.png";
 						}
+
 					} else {
 						$attributes[$tmp[0]] = isset($tmp[1]) ? $tmp[1] : null;
 					}

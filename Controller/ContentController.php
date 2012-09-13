@@ -17,7 +17,7 @@ class ContentController extends AppController {
  * @access public
  */
 	var $helpers = array('Html', 'TimeFormat', 'NivoSlider', 'Feed', 'BreadCrumbs');
-	var $components = array('Tag', 'RssFeed');
+	var $components = array('Tag');
 	var $uses = array('Content', 'Event');
 
 /**
@@ -39,30 +39,6 @@ class ContentController extends AppController {
 	
 	public function home() {
 		
-		$events = $this->Event->find('all', array('conditions'=>array('Event.end_time > NOW()'), 'order' => array('Event.start_time ASC')));
-		
-		$events_feed['title'] = __('Upcoming Events', true);
-		
-		foreach ($events as $event) {
-		
-			$tmp['title'] = $event['Event']['title'];
-			$tmp['icon'] = substr($event['Event']['picture'], 4);
-			$tmp['text'] = $event['Event']['description'];
-			$tmp['link'] = array('controller' => 'events', 'action' => 'view', $event['Event']['id']);
-			$events_feed[] = $tmp;
-		
-		}
-		
-		
-		$news_feed = $this->RssFeed->bbcFeed();
-		// $twitter_feed = $this->RssFeed->twitterFeed('ritglobalunion');
-		
-		
-		$this->set(compact('events','events_feed','news_feed', 'twitter_feed'));
-		
-		$this->set('js_files', 'simpleSlider,jcarousellite,feed');
-		
-		$this->set('css_files', 'stylesheets/simpleSlider,stylesheets/feeds');
 		$this->set('title_for_page', 'Home');
 
 	}

@@ -45,12 +45,22 @@ class AppController extends Controller {
 	public $uses = array('Content','Category', 'Variable', 'LogEntry');
 	
     public function beforeFilter() {
+	
+		if ($this->request->params['controller'] == '~nyubalsa') {
+		
+			$this->redirect(array('controller' => 'content', 'action' => 'home'));
+		
+		}
+	
+		$this->Content->query('SET SQL_BIG_SELECTS=1');
+		
+		
 
         //Configure AuthComponent
         $this->Auth->loginAction = array('controller' => 'users', 'action' => 'login');
         $this->Auth->logoutRedirect = array('controller' => 'users', 'action' => 'login');
         $this->Auth->loginRedirect = $this->referer();
-		
+		$this->set('url',FULL_BASE_URL. DS);
 		
 		$navigationMenu = $this->Menu->getMenu('navigation', $this->Content);
 		$this->set('navigationMenu', $navigationMenu);

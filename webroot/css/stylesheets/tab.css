@@ -46,8 +46,11 @@
 }
 
 /* line 38, ../sass/tab.sass */
-.tabContent {
-  width: 600px;
+.tabContent textarea{
+  width: 100%;
+  max-width: 100%;
+ } 
+ .tabContent {
   margin: 0 auto;
   padding: 10px 20px;
 }

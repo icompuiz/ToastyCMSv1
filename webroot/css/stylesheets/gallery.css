@@ -1,6 +1,6 @@
 /* line 14, ../sass/gallery.sass */
 #gallery {
-  width: 900px;
+  width: 740px;
   margin: 0 auto;
   text-align: center;
 }
@@ -10,32 +10,22 @@
   float: left;
   margin: 5px;
 }
-/* line 22, ../sass/gallery.sass */
-.gallery_li:first-child {
-  margin-left: 0;
-}
-/* line 25, ../sass/gallery.sass */
-.gallery_li:last-child {
-  margin-right: 0;
-}
+
 
 /* line 29, ../sass/gallery.sass */
 .gallery_icon {
-  border: 2px solid #e2e2e2;
   text-align: center;
-  padding: 5px;
 }
 /* line 33, ../sass/gallery.sass */
 .gallery_icon .img_wrap {
-  height: 140px;
-  width: 200px;
+  height: 170px;
+  width: 170px;
   margin: 0 auto;
   overflow: hidden;
 }
 /* line 38, ../sass/gallery.sass */
 .gallery_icon .img_wrap img {
-  width: 100%;
-  min-height: 140px;
+  height: 170px;
 }
 
 /* line 41, ../sass/gallery.sass */
@@ -60,7 +50,7 @@
 
 /* line 55, ../sass/gallery.sass */
 .item_title {
-  width: 200px;
+  width: 100px;
   margin: 0 auto;
   white-space: wrap;
 }

@@ -161,26 +161,31 @@ class UsersController extends AppController {
 		if ($this->request->is('post')) {
 			
 			if ($this->Auth->login()) {
+				$redir = $this->Auth->redirect();
+				$end = substr($redir, strrpos($redir, "/") + 1);
+				if ( $end != "login" ) {
+					$this->redirect($redir);
+				} else {
+					$user = $this->Session->read("Auth.User");
 				
-				$username = $this->Session->read("Auth.User");
-			
-				if ($username['group_id'] == 1) {
-					$this->Auth->loginRedirect = array('admin' => true, 'controller' => 'administration', 'action' => 'index');
-				
-					if ( isset($this->request->params['admin']) ) {
-						$this->redirect(array('controller' => 'administration'));
-					}
-					elseif ( isset($this->request->params['manager']) ) {
-						$this->redirect(array('controller' => 'management'));
-					}	
+					if ($user['group_id'] == 1) {
+						$this->Auth->loginRedirect = array('admin' => true, 'controller' => 'administration', 'action' => 'index');
 					
-				}
+						if ( isset($this->request->params['admin']) ) {
+							$this->redirect(array('controller' => 'administration'));
+						}
+						elseif ( isset($this->request->params['manager']) ) {
+							$this->redirect(array('controller' => 'management'));
+						}	
+						
+					}
+					
+					$username = $user['username'];
+					$flash = $username;
+					$this->log($flash, "user_login", "UsersController", "user");
 				
-				$username = $username['username'];
-				$flash = $username;
-				$this->log($flash, "user_login", "UsersController", "user");
-			
-				$this->redirect($this->Auth->loginRedirect);
+					$this->redirect($this->Auth->loginRedirect);
+				}
 			} else {
 				$username = $this->request->data['User']['username'];
 				$flash = $username;

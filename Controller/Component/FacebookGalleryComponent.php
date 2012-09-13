@@ -18,7 +18,7 @@ class FacebookGalleryComponent extends Component {
 		
 		foreach($albums as $album) {
 		
-			if ( $album['name'] != "Profile Pictures")
+			if ( $album['name'] != "Profile Pictures" && $album['name'] != "Cover Photos")
 			{
 				$cur = array();
 				$cur['id'] = $album['id'];

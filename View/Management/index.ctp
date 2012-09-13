@@ -5,6 +5,9 @@
 			<?=$this->Html->link('Content and Categories', array('manager' => 'true','controller'=>'categories'))?>
 	</div>
 	<div class="">
+			<?=$this->Html->link('Forms', array('manager' => 'true','controller'=>'forms'))?>
+	</div>
+	<div class="">
 			<?=$this->Html->link('Events', array('manager' => 'true', 'controller'=>'events'))?>
 	</div>
 	<div class="">

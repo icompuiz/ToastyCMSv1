@@ -401,6 +401,32 @@ class ActionsHelper extends AppHelper {
 	
 	}
 	
+	public function forms_edit() {
+	
+		$this->pre();
+		
+		?>
+		<li><?=$this->Html->link('View Submissions', array('controller' => 'form_submissions', 'action' => 'index', $this->Form->value('Form.id'))) ?></li>
+		<li><?=$this->backToManagement()?></li>
+
+		<?
+		
+		$this->post();
+	
+	}
+	
+	public function form_submissions_index($id = null) {
+		$this->pre();
+		
+		?>
+		<li><?=$this->Html->link('Back to Form', array('controller' => 'forms', 'action' => 'edit', $id)) ?></li>
+		<li><?=$this->backToManagement()?></li>
+
+		<?
+		
+		$this->post();
+	}
+	
 	private function pre() {
 		?>
 		<div class="actions">

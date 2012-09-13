@@ -2,7 +2,6 @@
 <layout>
 	<name>default</name>
 	<fields>
-		<meeting_time type="time"/>
-		<bio type="text"/>
+		<position type="string"/>
 	</fields>
 </layout>

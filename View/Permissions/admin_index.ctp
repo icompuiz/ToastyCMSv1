@@ -1,7 +1,7 @@
 <?=$this->Actions->backToAdministration()?>
 <?if(!empty($controllers)):?>
 <div class="permissions form">
-	<?=$this->Form->create(null, array('controller'=>'Permissions', 'action' => 'setPermissions'))?>
+	<?=$this->Form->create(null, array('url' => array('controller'=>'permissions', 'action' => 'setPermissions')))?>
 	<fieldset>
 		<legend><?php echo __('Manage Permissions'); ?></legend>
 		<div class="controllers box"> 

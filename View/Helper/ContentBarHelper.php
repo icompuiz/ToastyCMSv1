@@ -267,6 +267,53 @@ class ContentBarHelper extends AppHelper {
 		
 		<?php
 	}
+	public function forms($forms) {
+		?>
+		<div id="content_bar">
+			<div class="content_actions actions">
+				<ul>
+					<li><?=$this->Html->link(__('New Form', true),array('controller' => 'forms','action'=>'add'))?></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<div id="content_box">
+				<ul>
+				<? foreach ($forms as $form): ?>
+					<li>
+							<div class="content_category"><?=$this->Html->link($form['Form']['name'], array('controller'=>'forms', 'action'=>'edit', $form['Form']['id']))?></div>
+					</li>
+				<?endforeach;?>
+				</ul>
+			</div>
+		</div>
+		
+		<?php
+	}
+	
+	public function form_submissions($id, $submissions) {
+	
+		?>
+		<div id="content_bar">
+			<div class="content_actions actions">
+				<ul>
+					<li><?=$this->Html->link('Download All Submissions', array('controller' => 'form_submissions', 'action' => 'download_submissions', $id)) ?></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<div id="content_box">
+				<ul>
+				<? foreach ($submissions as $submission): ?>
+					<li>
+							<div class="content_category"><?=$this->Html->link($submission['unique_id'], array('controller'=>'form_submissions', 'action'=>'view', $submission['id']))?></div>
+					</li>
+				<?endforeach;?>
+				</ul>
+			</div>
+		</div>
+		
+		<?php
+	
+	}
 	
 	
 
