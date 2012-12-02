@@ -29,7 +29,7 @@ Getting Started
 
 1) Download Toasty to your web directory
 	$ git clone git://github.com/icompuiz/ToastyCMS.git
-	$ wget https://nodeload.github.com/icompuiz/ToastyCMS/zipball/master
+	$ wget https://github.com/icompuiz/ToastyCMS/archive/master.zip
 		- This will download a zip archive, unzip this archive to your site.
 2) Execute the perl script install.pl
 	$ perl install.pl
